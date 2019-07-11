@@ -2,8 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/gtalarico/python-project.svg?style=svg&circle-token=c175e352384989af2f140169c734a331cdde0b52)](https://circleci.com/gh/gtalarico/python-project)
 
-The goal of this repository is to create cleaner and more maintainable Python Projects by
-using consistent practices and community best practices.
+My personal template for bootstraping new python projects.
 
 ## Contents
 
@@ -17,34 +16,24 @@ using consistent practices and community best practices.
 
 ## Project Template
 
-
-
-but it also includes a script (`start.sh`) to help you quickly bootstrap a new project
-using standards described here.
+Includes a script (`start.sh`) to help you quickly bootstrap a new project using standards described here.
 
 Open terminal on the location you keep your projects and run the commands below.
 
 ```
-c:\repos
-$ git clone git@github.com:gtalarico/python-project.git MyNewProject
+~/repos
+$ git clone git@github.com:gtalarico/python-project.git my-project
 
-c:\repos
-$ cd MyNewProject
+~/repos
+$ cd my-project
 
-c:\repos
-$ bash start.sh
+~/repos/my-project
+$ sh start.sh
 ```
 
 #### Note
 
-The commands above should work on a MacOS Terminal. If you are on Windows make sure you are using [Cmder](http://cmder.net/)
-
-## Python Version
-
-All new Python projects should use the latest stable Python `3.7.x`,
-unless there are major compatibility issues with legacy code.
-
-For installation instructions see [DOCS/Installation.md](https://github.com/gtalarico/python-project/blob/master/DOCS/INSTALLING.md).
+The commands above should work on a MacOS Terminal. If you are on Windows it should work with [Cmder](http://cmder.net/) or similar.
 
 ## Virtual Environments
 
@@ -58,15 +47,12 @@ Applications want to lock dependencies to an exact version for deterministic ins
 
 For the purpose of this document, applications are projects that are executed or deployed, but _not used by other applications or libraries as dependencies_.
 
-#### Pipenv
+#### Venv
 
-Applications should use `pipenv` to manage virtual environment and dependencies.
+After using virtualenv-wrapper and pipenv for a while, I have gone back to good old `venv`.
+It's always available and it's fast.
 
-Pipenv can be installed in your default system python using `pip install pipenv`, and should be the only package installed outside virtual environments.
-
-See the official [pipenv docs for additional information](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
-
-#### Starting a Project
+###### Start new venv
 
 Typical setup for a new projects should be something like this:
 
@@ -98,10 +84,10 @@ Make sure you launch the editor from your project directory with an active virtu
 so VSCode can detect it:
 
 ```bash
-~/repos/myproject
-$ pipenv shell
+~/repos/my-project
+$ . .venv/activate/shell
 
-~/repos/myproject
+~/repos/my-project
 $ code .
 ```
 

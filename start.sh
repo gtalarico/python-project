@@ -17,7 +17,7 @@ info "Cleaning up repo..."
 
 rm *.md
 rm Makefile
-rm -rdf .git
+rm -rdf .gitw
 rm start.sh
 
 mv TEMPLATES/* .
