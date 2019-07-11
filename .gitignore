@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+.cache
+.mypy_cache\
+.env
+.venv
+
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*security-sgps.py
+*security_backend.py
